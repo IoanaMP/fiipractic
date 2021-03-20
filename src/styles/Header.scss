@@ -1,0 +1,25 @@
+.headerContainer {
+  width: 100%;
+  height: 120px;
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+
+  .logoContainer {
+    padding: 20px;
+  }
+
+  .navContainer {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+
+    .navigationElement {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+}

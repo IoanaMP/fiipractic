@@ -1,41 +1,24 @@
-import React from 'react'
-import './App.css';
-import Counter from './components/Counter'
+import React from "react";
+import "./styles/index.scss";
+import Header from "./containers/Header";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import HomePage from "./containers/HomePage";
+import ArticleItem from "./containers/ArticleItem";
+import ArticlesPage from "./containers/ArticlesPage";
+import TestPage from "./components/TestPage";
 
-class App extends React.Component {
-constructor(props){
-    super(props)
-    this.state={
-      name: 'state1'
-    }
-  }
-
-  // componentDidMount(){
-  //   this.setState({
-  //     name: 'state1',
-  //     isOn: true
-  //   })
-  // }
-
-  handleButton = ( ) =>{
-    this.setState({
-      isOn: !this.state.isOn
-    } )
-
-  }
-  
-
-render(){
-  const {isOn, name} = this.state
+const App = () => {
   return (
-      <>
-        <div></div>
-        <Counter />
-      </>
+    <Router>
+      <Header />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/articles" component={ArticlesPage} />
+        <Route exact path="/articles/:id" component={ArticleItem} />
+        <Route path="/articles/:id/:type" component={TestPage} />
+      </Switch>
+    </Router>
   );
-}
-}
-
-
+};
 
 export default App;
