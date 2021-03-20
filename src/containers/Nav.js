@@ -1,9 +1,10 @@
 import React from "react";
 
 const navItems = [
-  { title: "Home", url: "https://www.youtube.com/" },
+  { title: "Home", url: "/" },
   { title: "About", url: "" },
   { title: "Products", url: "" },
+  { title: "Articles", url: "/articles/" },
 ];
 
 const Nav = () => {
