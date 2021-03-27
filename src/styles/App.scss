@@ -1,0 +1,21 @@
+@import "variables.scss";
+
+.main{
+  background-color: $mainColor;
+
+  .secondClass{
+    color: red;
+  }
+}
+
+
+
+@mixin setTitle {
+  font-size: bigButtonSize;
+  font-weight: 700;
+  color: red;
+}
+
+.mainTitle{
+  @include setTitle;
+}
