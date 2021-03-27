@@ -2,9 +2,10 @@ import React from "react";
 
 const navItems = [
   { title: "Home", url: "/" },
-  { title: "About", url: "" },
-  { title: "Products", url: "" },
+  { title: "About", url: "/about" },
+  { title: "Products", url: "/products" },
   { title: "Articles", url: "/articles/" },
+  { title: "Counter", url: "/counter" },
 ];
 
 const Nav = () => {
