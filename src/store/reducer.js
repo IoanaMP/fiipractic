@@ -1,23 +1,24 @@
-import * as actionTypes from './actions'
+import * as actionTypes from "./actions";
 
 const initialState = {
-    counter : 0,
-    allArticles : [],
-    isUserAuth : false
-}
+  counter: 0,
+  allArticles: [],
+  users: [],
+};
 
-export const reducer = (state = initialState, action) =>{
-    if(action.type === actionTypes.INCREMENT){
-        return {
-            ...state,
-            counter : state.counter + 1
-        }
-    }
-    if(action.type === actionTypes.DECREMENT){
-        return {
-            ...state,
-            counter : state.counter - action.value
-        }
-    }
-    return state
-}
+export const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case actionTypes.INCREMENT:
+      return {
+        ...state,
+        counter: state.counter + 1,
+      };
+    case actionTypes.DECREMENT:
+      return {
+        ...state,
+        counter: state.counter - action.value,
+      };
+    default:
+      return state;
+  }
+};
