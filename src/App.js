@@ -8,10 +8,10 @@ import AboutPage from "./containers/AboutPage";
 import ArticleItem from "./containers/ArticleItem";
 import ArticlesPage from "./containers/ArticlesPage";
 import TestPage from "./components/TestPage";
-import Counter from '../src/containers/Counter';
+import Counter from "../src/containers/Counter";
+import UpdaodComponent from "./containers/UploadProducts";
 
 const App = () => {
-
   return (
     <Router>
       <Header />
@@ -23,6 +23,7 @@ const App = () => {
         <Route exact path="/articles/:id" component={ArticleItem} />
         <Route path="/articles/:id/:type" component={TestPage} />
         <Route exact path="/counter" component={Counter} />
+        <Route exact path="/addproduct" component={UpdaodComponent} />
       </Switch>
     </Router>
   );

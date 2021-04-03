@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Articles page test should match snapshot 1`] = `
+<div
+  className="articleContainer"
+>
+  <div
+    className="articleTitle"
+  >
+    prim
+  </div>
+  <div
+    className="articleContent"
+  />
+</div>
+`;
